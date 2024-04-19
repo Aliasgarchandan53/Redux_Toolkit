@@ -16,9 +16,8 @@ export const todoSlice=createSlice({
             state.todos.push(todo)
         },  //state and action are two properties we always get access to in reducer functions
         removeTodo:(state,action)=>{
-            state.todos=state.todos.filter((todo)=>{
-                        todo.id!==action.payload
-            })
+            state.todos=state.todos.filter((todo)=>todo.id!==action.payload //bug fixed 
+            )
         }
     }
 })
